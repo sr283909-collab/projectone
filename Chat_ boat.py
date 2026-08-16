@@ -6,12 +6,12 @@ print("==Smart Chat Bot==")
 print("Type 'bye' to exit\n")
 
 def get_weather(city):
-    api_key = "f14f02dff3e4d9bcca7b8c9187bd0b20"  # your OpenWeatherMap API key
+    api_key = "f14f02dff3e4d9bcca7b8c9187bd0b20"  
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     try:
         with urllib.request.urlopen(url) as response:
             data = json.loads(response.read().decode())
-            print("DEBUG: Raw API response:", data)  # <-- shows exactly what API returned
+            print("DEBUG: Raw API response:", data)  
             
             if data.get("cod") == 200:
                 main = data["main"]
