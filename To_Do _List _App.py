@@ -3,13 +3,11 @@ from tkinter import messagebox
 
 FILE_NAME = "tasks.txt"
 
-# ---------- WINDOW ----------
 window = tk.Tk()
 window.title("Pro To-Do App")
 window.geometry("420x500")
 window.config(bg="#1e1e1e")
 
-# ---------- FUNCTIONS ----------
 def add_task():
     task = entry.get().strip()
     if task:
@@ -100,7 +98,6 @@ tk.Button(
     command=clear_all
 ).grid(row=0, column=2, padx=5)
 
-# ---------- LISTBOX ----------
 listbox_frame = tk.Frame(window)
 listbox_frame.pack(pady=10)
 
@@ -121,8 +118,5 @@ listbox.pack()
 
 scrollbar.config(command=listbox.yview)
 
-# ---------- LOAD TASKS ----------
-load_tasks()
 
-# ---------- RUN ----------
 window.mainloop()
